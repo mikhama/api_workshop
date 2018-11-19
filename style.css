@@ -25,4 +25,7 @@ button {
     border-radius: 5px;
     margin: 10px;
     background-color: azure;
+    display: flex;
+    flex-direction: column;
+    
 }
