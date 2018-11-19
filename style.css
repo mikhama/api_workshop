@@ -1,0 +1,28 @@
+body {
+    margin: 0 auto;
+    background-color: #0F095A;
+    font-family: Arial, Helvetica, sans-serif;
+    /* display: flex;
+    flex-direction: column; */
+}
+.button{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    border: solid 1px white;
+    border-radius: 5px;
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+    
+}
+.wrapper {
+    border: solid 1px white;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: azure;
+}
