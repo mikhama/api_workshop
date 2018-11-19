@@ -3,29 +3,30 @@ class News {
         this.articles = articles;
     }
 
-    render(articles) {
-        const mainArticle = document.createElement('main');
-        const title = document.createElement('h1');
-        const container = document.createElement('div');
-        const divArt = document.createElement('div');
-        const imgArt = document.createElement('image');
-        
-        container.classList.add('wrapper');
-        divArt.classList.add('wrapper__article');
-        imgArt.classList.add('wrapper__img');
-        
-        for (let i = 0;i < articles.length; i++) {
-            const article = container.cloneNode(true);
-            article.querySelector('.wrapper__img').setAttribute('src', article.); //tbd
-            article.querySelector('.wrapper__article').setAttribute('src', article.);
-        };
+    render() {
+        const main = document.querySelector('main');
 
-        const html = '';
-        articles.forEach(element => {
+        let html = '';
+        this.articles.forEach(element => {
             html += `
-
-            `
+            <div class="wrapper">
+                <div class="wrapper__article">
+                    <h1 class="wrapper__title">${element.title}</h1>
+                    <article class="wrapper__paragraf">${element.content}</article>
+                </div>
+                <div class="wrapper__img">
+                <img
+                    src="${element.urlToImage}"
+                    alt="${element.title}"
+                />
+                </div>
+            </div>
+            `;    
         });
 
+        const magic = document.querySelector('#magic');
+        magic.addEventListener('click', () => {
+            main.innerHTML = html;
+        });
     }
 }

@@ -5,8 +5,8 @@ class App {
 
     run() {
         this.api.request().then(({ articles }) => {
-            // const news = new News(articles);
-            // news.render();
+            const news = new News(articles);
+            news.render();
             console.dir(articles);
         });
     }
